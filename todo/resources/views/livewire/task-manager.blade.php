@@ -1,15 +1,14 @@
 <div>
-    <h2>Task Manager Blade</h2>
+    <h2>To-Do List</h2>
 
     <input type="text" wire:model="title" placeholder="Task Title">
-    <button wire:click="addTask">Add Task</button>
+    <textarea wire:model="description" placeholder="Task Description"></textarea>
+    <input type="number" wire:model="priority" min="1" max="5">
+    <button wire:click="addTask" class="primary">Add Task</button>
 
-    <ul>
+    <div class="task-container">
         @foreach ($tasks as $task)
-            <li>
-                {{ $task['title'] }}
-                <button wire:click="deleteTask({{ $task['id'] }})">Delete</button>
-            </li>
+            <livewire:task-card :task="$task" :wire:key="$task->id" />
         @endforeach
-    </ul>
+    </div>
 </div>

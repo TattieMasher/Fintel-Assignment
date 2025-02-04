@@ -13,6 +13,8 @@ class TaskManager extends Component
     public $description = "";
     public $priority = 1;
 
+    protected $listeners = ['taskDeleted' => 'loadTasks'];  // accepts a call from child TaskCard to refresh tasks from db
+
     public function mount()
     {
         $this->loadTasks();
@@ -20,7 +22,7 @@ class TaskManager extends Component
 
     public function loadTasks()
     {
-        $this->tasks = Task::orderBy('priority', 'desc')->get()->toArray();
+        $this->tasks = Task::orderBy('priority', 'desc')->get();
     }
 
     public function addTask()
@@ -34,7 +36,7 @@ class TaskManager extends Component
             ]);
 
             $this->reset(['title', 'description', 'priority']);
-            $this->loadTasks(); // Refresh the task list to populate ym changes
+            $this->loadTasks(); // Refresh the task list to populate changes
         }
     }
 
