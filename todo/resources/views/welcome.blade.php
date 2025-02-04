@@ -21,8 +21,13 @@
         @endif
     </head>
     <body class="">
-        <p>Hello world!!</p>
-        <div class="flex flex-row justify-between rounded">
+        <h1>Alex's To-Do App</h1>
+
+        <!-- NEEDS THIS. This is how the taskmanager component is rendered -->
+        <livewire:task-manager />
+        @livewireScripts
+
+        <div class="flex flex-row justify-evenly rounded">
             <div class= "w-10 h-10 bg-black primary rounded"></div>
             <div class= "w-10 h-10 bg-black secondary rounded"></div>
             <div class= "w-10 h-10 bg-black accent rounded"></div>
