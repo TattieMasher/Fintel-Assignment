@@ -1,8 +1,32 @@
-* {
-    color: seagreen !important;
+/* Colour scheme generated using coolors.co */
+$background-colour: #F5F8DE;
+$primary-colour: #7678ED;
+$secondary-colour: #EDADC7;
+$accent-colour: #51355A;
+$error-colour: #D7263D;
+$text-colour: black;
+
+body {
+    background-color: $background-colour;
+    font-family: "Montserrat", serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: $text-colour;
     text-align: center;
 }
 
-body {
-    padding: 50px 0px !important;
+.primary {
+    background-color: $primary-colour;
+}
+
+.secondary {
+    background-color: $secondary-colour;
+}
+
+.accent {
+    background-color: $accent-colour;
+}
+
+.error {
+    background-color: $error-colour;
 }
