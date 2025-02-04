@@ -10,7 +10,7 @@ return new class extends SimpleMigration
             'string:title',
             'string:description',
             'tinyInteger:priority' => ['default:1'],
-            'boolean:completed' => ['default:false'],
+            'boolean:completed' => ['default:0'],
             'timestamps',
         ],
     ];
