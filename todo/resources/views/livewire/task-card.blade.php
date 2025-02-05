@@ -7,7 +7,7 @@
         </div>
 
         <div class="task-buttons flex flex-col justify-between">
-            <button wire:click="toggleTask" class="primary">
+            <button wire:click="toggleTask" class="{{ $task['completed'] ? 'accent' : 'primary' }}">
                 {{ $task['completed'] ? 'Reopen' : 'Complete' }}
             </button>
             <button wire:click="deleteTask" class="error">Delete</button>
