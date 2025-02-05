@@ -1,7 +1,9 @@
 <div class="task-card {{ $task['completed'] ? 'completed' : '' }}">
-    <h3>{{ $task['title'] }}</h3>
-    <p>{{ $task['description'] }}</p>
-    <p><strong>Priority:</strong> {{ $task['priority'] }}</p>
+    <div class="flex justify-between">
+        <h4>{{ $task['title'] }}</h4>
+        <p>{{ $task['description'] }}</p>
+        <p><strong>Priority:</strong> {{ $task['priority'] }}</p>
+    </div>
 
     <button wire:click="toggleTask" class="primary">
         {{ $task['completed'] ? 'Mark Incomplete' : 'Mark Complete' }}
