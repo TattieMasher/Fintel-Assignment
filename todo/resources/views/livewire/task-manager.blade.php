@@ -2,11 +2,11 @@
     <div class="inputs flex flex-col items-center">
         <div class="input-wrapper">
             <label>Task Title</label>
-            <input type="text" wire:model="title" placeholder="Task Title">
+            <input type="text" wire:model="title" placeholder="Name for your task">
         </div>
         <div class="input-wrapper">
             <label>Task Description</label>
-            <textarea wire:model="description" placeholder="Task Description"></textarea>
+            <textarea wire:model="description" placeholder="An optional long description of your task"></textarea>
         </div>
         <div class="input-wrapper">
             <label>Task Priority</label>
@@ -19,6 +19,10 @@
         <div class="task-section">
             <h3>Open Tasks</h3>
             <div class="task-container">
+                @if (count($tasks)==0)
+                    <h2>All done!</h2>
+                    <h5>No open tasks</h5>
+                @endif
                 @foreach ($tasks->where('completed', false) as $task)
                     <livewire:task-card :task="$task" :wire:key="'open-'.$task->id" />
                 @endforeach

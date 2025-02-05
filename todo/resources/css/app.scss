@@ -19,19 +19,6 @@ h1 {
     font-size: 3rem;
 }
 
-.inputs {
-    max-width: 700px;
-    gap: 1rem;
-
-    * {
-        width: 100%;
-    }
-
-    label {
-        text-align: center;
-    }
-}
-
 button {
     border-radius: 10px;
     padding: 0.5rem;
@@ -39,6 +26,7 @@ button {
     font-weight: 700;
     border-width: 3px;
     border-style: solid;
+    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.2);
 }
 
 .primary {
@@ -59,6 +47,32 @@ button {
 .error {
     border-color: $error-colour;
     color: $error-colour;
+}
+
+.inputs {
+    margin: auto;
+    max-width: 50vw;
+    min-width: 5vw;
+    gap: 0.1rem;
+
+    * {
+        padding: 0.2rem;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    button {
+        margin: 2rem 0 0;
+    }
+
+    label {
+        text-align: center;
+    }
+
+    input, 
+    textarea {
+        box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .task-list {

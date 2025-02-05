@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Alex's Fintel Assignment</title>
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,12 +26,5 @@
         <!-- NEEDS THIS. This is how the taskmanager component is rendered -->
         <livewire:task-manager />
         @livewireScripts
-
-        <div class="flex flex-row justify-evenly rounded">
-            <div class= "w-10 h-10 bg-black primary rounded"></div>
-            <div class= "w-10 h-10 bg-black secondary rounded"></div>
-            <div class= "w-10 h-10 bg-black accent rounded"></div>
-            <div class= "w-10 h-10 bg-black error rounded"></div>
-        </div>
     </body>
 </html>
