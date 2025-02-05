@@ -1,6 +1,4 @@
 <div>
-    <h2>To-Do List</h2>
-
     <input type="text" wire:model="title" placeholder="Task Title">
     <textarea wire:model="description" placeholder="Task Description"></textarea>
     <input type="number" wire:model="priority" min="1" max="5">

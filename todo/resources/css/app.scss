@@ -15,20 +15,28 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
 .primary {
-    background-color: $primary-colour;
+    border-color: $primary-colour;
+    color: $primary-colour;
 }
 
 .secondary {
-    background-color: $secondary-colour;
+    border-color: $secondary-colour;
+    color: $secondary-colour;
 }
 
 .accent {
-    background-color: $accent-colour;
+    border-color: $accent-colour;
+    color: $accent-colour;
 }
 
 .error {
     border-color: $error-colour;
+    color: $error-colour;
 }
 
 .task-list {
@@ -41,10 +49,21 @@ body {
 .task-section {
     flex: 1;
     margin: 1rem;
-    padding: 15px;
+    padding: 3rem 5rem;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
+
+    .task-card {
+        margin: 0 1rem 2rem;
+        border-radius: 10px;
+        background-color: $secondary-colour;
+        box-shadow: 0px 4px 6px rgba(0, 0, 1, 1);
+
+        div {
+            margin: 20px 50px;
+        }
+    }
 
     h3 {
         color: $accent-colour;
@@ -54,6 +73,7 @@ body {
 
     h4 {
         font-size: 1.25rem;
+        font-weight: 700;
     }
 
     .task-container {
@@ -63,8 +83,11 @@ body {
     }
 
     button {
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 0.5rem;
         font-weight: 700;
+        border-width: 3px;
+        border-style: solid;
+        width: 40%;
     }
 }
