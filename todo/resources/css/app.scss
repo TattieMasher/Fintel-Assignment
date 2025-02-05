@@ -27,6 +27,7 @@ button {
     border-width: 3px;
     border-style: solid;
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.2);
+    transition: all linear 0.2s;
 }
 
 .primary {
@@ -47,6 +48,29 @@ button {
 .error {
     border-color: $error-colour;
     color: $error-colour;
+}
+
+.primary:hover,
+.secondary:hover,
+.accent:hover,
+.error:hover {
+    color: white;
+}
+
+.primary:hover {
+    background-color: $primary-colour;
+}
+
+.secondary:hover {
+    background-color: $secondary-colour;
+}
+
+.accent:hover {
+    background-color: $accent-colour;
+}
+
+.error:hover {
+    background-color: $error-colour;
 }
 
 .inputs {
