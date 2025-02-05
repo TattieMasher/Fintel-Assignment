@@ -17,7 +17,7 @@ class TaskCard extends Component
     public function deleteTask()
     {
         Task::where('id', $this->task['id'])->delete();
-        $this->dispatch('taskDeleted'); // Callback to parent container
+        $this->dispatch('taskUpdated'); // Callback to parent container
     }
 
     public function toggleTask()
@@ -26,7 +26,7 @@ class TaskCard extends Component
         $task->completed = !$task->completed;
         $task->save();
 
-        $this->task['completed'] = $task->completed;
+        $this->dispatch('taskUpdated'); // Callback to parent container
     }
 
     public function render()

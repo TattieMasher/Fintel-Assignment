@@ -13,7 +13,7 @@ class TaskManager extends Component
     public $description = "";
     public $priority = 1;
 
-    protected $listeners = ['taskDeleted' => 'loadTasks'];  // accepts a call from child TaskCard to refresh tasks from db
+    protected $listeners = ['taskDeleted' => 'loadTasks', 'taskUpdated' => 'loadTasks'];
 
     public function mount()
     {
