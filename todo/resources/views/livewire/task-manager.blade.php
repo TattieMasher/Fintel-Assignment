@@ -1,8 +1,10 @@
 <div>
-    <input type="text" wire:model="title" placeholder="Task Title">
-    <textarea wire:model="description" placeholder="Task Description"></textarea>
-    <input type="number" wire:model="priority" min="1" max="5">
-    <button wire:click="addTask" class="primary">Add Task</button>
+    <div class="inputs flex flex-col items-center">
+        <input type="text" wire:model="title" placeholder="Task Title">
+        <textarea wire:model="description" placeholder="Task Description"></textarea>
+        <input type="number" wire:model="priority" min="1" max="5">
+        <button wire:click="addTask" class="primary">Add Task</button>
+    </div>
 
     <div class="task-list">
         <!-- Open Tasks -->
