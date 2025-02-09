@@ -2,10 +2,6 @@
 
 This project was created as part of an assignment for Fintel's interview process. This was my first attempt at using Laravel, and modern PHP syntax/features. 
 
-# Files
-
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
-
 # Database Interactivity
 This web-app interacts with a single database table, called Tasks, which contain the following columns (with examples):
 |     ...      | id  | name                       | description                                  | priority | created_at              | updated_at              |
